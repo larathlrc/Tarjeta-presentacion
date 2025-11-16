@@ -1,0 +1,161 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    background: conic-gradient(
+        from 210deg,
+        rgba(197, 187, 184, 1) 0deg,
+        rgba(197, 187, 184, 1) 24deg,
+        rgba(184, 181, 184, 1) 24deg,
+        rgba(184, 181, 184, 1) 48deg,
+        rgba(169, 175, 183, 1) 48deg,
+        rgba(169, 175, 183, 1) 72deg,
+        rgba(154, 168, 181, 1) 72deg,
+        rgba(154, 168, 181, 1) 96deg,
+        rgba(139, 161, 179, 1) 96deg,
+        rgba(139, 161, 179, 1) 120deg,
+        rgba(125, 152, 175, 1) 120deg,
+        rgba(125, 152, 175, 1) 144deg,
+        rgba(112, 144, 171, 1) 144deg,
+        rgba(112, 144, 171, 1) 168deg,
+        rgba(101, 135, 166, 1) 168deg,
+        rgba(101, 135, 166, 1) 192deg,
+        rgba(92, 126, 161, 1) 192deg,
+        rgba(92, 126, 161, 1) 216deg,
+        rgba(85, 117, 155, 1) 216deg,
+        rgba(85, 117, 155, 1) 240deg,
+        rgba(81, 108, 148, 1) 240deg,
+        rgba(81, 108, 148, 1) 264deg,
+        rgba(79, 99, 141, 1) 264deg,
+        rgba(79, 99, 141, 1) 288deg,
+        rgba(80, 90, 133, 1) 288deg,
+        rgba(80, 90, 133, 1) 312deg,
+        rgba(84, 83, 125, 1) 312deg,
+        rgba(84, 83, 125, 1) 336deg,
+        rgba(91, 75, 116, 1) 336deg 360deg
+    );
+}
+
+#contenedor-lara {
+    width: 540px;
+    margin: auto;
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    color: white;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid rgba(255,255,255,0.15);
+
+    background: radial-gradient(
+        circle at top,
+        rgba(210, 225, 255, 0.9) 0%,
+        rgba(156, 177, 220, 0.95) 45%,
+        rgba(112, 144, 171, 0.98) 100%
+    );
+
+   box-shadow: 0 25px 60px rgba(0,0,0,0.10);
+}
+
+#contenedor-lara > * {
+    position: relative;
+    z-index: 1;
+}
+
+.foto-principal {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: center 20%;
+    border-radius: 50%;
+    border: 5px solid rgba(255,255,255,0.95);
+    margin: 1.3rem auto 2.2rem auto;
+    display: block;
+    box-shadow: 0 0 12px rgba(255,255,255,0.9), 
+                0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.foto-principal:hover {
+   box-shadow: 0 6px 20px rgba(0,0,0,0.28);
+    transform: translateY(-4px);
+}
+
+.info-text {
+    display: inline-block;
+    max-width: 340px;
+    padding: 1rem 1.7rem;
+    border-radius: 18px;
+    margin-bottom: 1.6rem;
+
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    backdrop-filter: blur(14px);
+  color: rgba(255,255,255,0.95);
+
+    transition: transform 0.25s ease,
+                box-shadow 0.25s ease,
+                background 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.info-text:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(
+        135deg,
+        rgba(255,255,255,0.38),
+        rgba(224, 235, 255, 0.42)
+    );
+    border-color: rgba(255,255,255,0.8);
+    box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+}
+
+.info-text h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+      color: rgba(255,255,255,0.98);
+}
+
+.info-text p {
+    font-size: 1.05rem;
+    opacity: 0.96;
+    line-height: 1.35;
+    font-weight: 400;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 0.6rem;
+    margin-bottom: 1rem;
+}
+
+.social-icons a {
+    color: rgba(255,255,255,0.9);
+    text-decoration: none;
+    font-size: 30px;
+    transition: transform 0.25s ease, color 0.25s ease, opacity 0.25s ease;
+    opacity: 0.9;
+}
+
+.social-icons a:nth-child(1) { font-size: 28px; }
+.social-icons a:nth-child(2) { font-size: 26px; }
+.social-icons a:nth-child(3) { font-size: 28px; }
+
+.social-icons a:hover {
+   color: #ffffff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.8);
+    transform: translateY(-3px) scale(1.25);
+}
+
