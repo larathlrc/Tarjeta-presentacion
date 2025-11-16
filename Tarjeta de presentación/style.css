@@ -63,7 +63,7 @@ body {
         rgba(112, 144, 171, 0.98) 100%
     );
 
-   box-shadow: 0 25px 60px rgba(0,0,0,0.10);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.10);
 }
 
 #contenedor-lara > * {
@@ -80,14 +80,10 @@ body {
     border: 5px solid rgba(255,255,255,0.95);
     margin: 1.3rem auto 2.2rem auto;
     display: block;
-    box-shadow: 0 0 12px rgba(255,255,255,0.9), 
-                0 6px 18px rgba(0,0,0,0.25);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.foto-principal:hover {
-   box-shadow: 0 6px 20px rgba(0,0,0,0.28);
-    transform: translateY(-4px);
+    box-shadow: 
+        0 0 12px rgba(255,255,255,0.9), 
+        0 6px 18px rgba(0,0,0,0.25);
+  
 }
 
 .info-text {
@@ -100,30 +96,16 @@ body {
     background: rgba(255, 255, 255, 0.18);
     border: 1px solid rgba(255, 255, 255, 0.28);
     backdrop-filter: blur(14px);
-  color: rgba(255,255,255,0.95);
+    color: rgba(255,255,255,0.95);
 
-    transition: transform 0.25s ease,
-                box-shadow 0.25s ease,
-                background 0.25s ease,
-                border-color 0.25s ease;
-}
-
-.info-text:hover {
-    transform: translateY(-3px);
-    background: linear-gradient(
-        135deg,
-        rgba(255,255,255,0.38),
-        rgba(224, 235, 255, 0.42)
-    );
-    border-color: rgba(255,255,255,0.8);
-    box-shadow: 0 14px 34px rgba(0,0,0,0.28);
+    /* hover eliminado */
 }
 
 .info-text h2 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
-      color: rgba(255,255,255,0.98);
+    color: rgba(255,255,255,0.98);
 }
 
 .info-text p {
@@ -154,8 +136,7 @@ body {
 .social-icons a:nth-child(3) { font-size: 28px; }
 
 .social-icons a:hover {
-   color: #ffffff;
+    color: #ffffff;
     text-shadow: 0 0 8px rgba(255,255,255,0.8);
     transform: translateY(-3px) scale(1.25);
 }
-
