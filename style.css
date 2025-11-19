@@ -60,10 +60,13 @@ body {
         circle at top,
         rgba(210, 225, 255, 0.9) 0%,
         rgba(156, 177, 220, 0.95) 45%,
-        rgba(112, 144, 171, 0.98) 100%
+        rgba(112, 144, 171, 1) 100%
     );
 
-    box-shadow: 0 25px 60px rgba(0,0,0,0.10);
+border: none;
+border-bottom: 1.5px solid rgba(255,255,255,0.4);
+
+
 }
 
 #contenedor-lara > * {
