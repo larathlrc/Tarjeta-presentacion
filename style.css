@@ -9,39 +9,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-
+    font-family: "Poppins", system-ui, sans-serif;
     background: conic-gradient(
         from 210deg,
-        rgba(197, 187, 184, 1) 0deg,
-        rgba(197, 187, 184, 1) 24deg,
-        rgba(184, 181, 184, 1) 24deg,
-        rgba(184, 181, 184, 1) 48deg,
-        rgba(169, 175, 183, 1) 48deg,
-        rgba(169, 175, 183, 1) 72deg,
-        rgba(154, 168, 181, 1) 72deg,
-        rgba(154, 168, 181, 1) 96deg,
-        rgba(139, 161, 179, 1) 96deg,
-        rgba(139, 161, 179, 1) 120deg,
-        rgba(125, 152, 175, 1) 120deg,
-        rgba(125, 152, 175, 1) 144deg,
-        rgba(112, 144, 171, 1) 144deg,
-        rgba(112, 144, 171, 1) 168deg,
-        rgba(101, 135, 166, 1) 168deg,
-        rgba(101, 135, 166, 1) 192deg,
-        rgba(92, 126, 161, 1) 192deg,
-        rgba(92, 126, 161, 1) 216deg,
-        rgba(85, 117, 155, 1) 216deg,
-        rgba(85, 117, 155, 1) 240deg,
-        rgba(81, 108, 148, 1) 240deg,
-        rgba(81, 108, 148, 1) 264deg,
-        rgba(79, 99, 141, 1) 264deg,
-        rgba(79, 99, 141, 1) 288deg,
-        rgba(80, 90, 133, 1) 288deg,
-        rgba(80, 90, 133, 1) 312deg,
-        rgba(84, 83, 125, 1) 312deg,
-        rgba(84, 83, 125, 1) 336deg,
-        rgba(91, 75, 116, 1) 336deg 360deg
+        rgba(197,187,184,1) 0deg, rgba(197,187,184,1) 24deg,
+        rgba(184,181,184,1) 24deg, rgba(184,181,184,1) 48deg,
+        rgba(169,175,183,1) 48deg, rgba(169,175,183,1) 72deg,
+        rgba(154,168,181,1) 72deg, rgba(154,168,181,1) 96deg,
+        rgba(139,161,179,1) 96deg, rgba(139,161,179,1) 120deg,
+        rgba(125,152,175,1) 120deg, rgba(125,152,175,1) 144deg,
+        rgba(112,144,171,1) 144deg, rgba(112,144,171,1) 168deg,
+        rgba(101,135,166,1) 168deg, rgba(101,135,166,1) 192deg,
+        rgba(92,126,161,1) 192deg, rgba(92,126,161,1) 216deg,
+        rgba(85,117,155,1) 216deg, rgba(85,117,155,1) 240deg,
+        rgba(81,108,148,1) 240deg, rgba(81,108,148,1) 264deg,
+        rgba(79,99,141,1) 264deg, rgba(79,99,141,1) 288deg,
+        rgba(80,90,133,1) 288deg, rgba(80,90,133,1) 312deg,
+        rgba(84,83,125,1) 312deg, rgba(84,83,125,1) 336deg,
+        rgba(91,75,116,1) 336deg 360deg
     );
 }
 
@@ -52,26 +37,24 @@ body {
     text-align: center;
     color: white;
     border-radius: 24px;
-    overflow: hidden;
     position: relative;
-    border: 1px solid rgba(255,255,255,0.15);
-
-    background: radial-gradient(
-        circle at top,
-        rgba(210, 225, 255, 0.9) 0%,
-        rgba(156, 177, 220, 0.95) 45%,
-        rgba(112, 144, 171, 1) 100%
+    background: radial-gradient(circle at top,
+        rgba(210,225,255,0.9) 0%,
+        rgba(156,177,220,0.95) 45%,
+        rgba(112,144,171,1) 100%
     );
-
-border: none;
-border-bottom: 1.5px solid rgba(255,255,255,0.4);
-
-
+    border-bottom: 1.5px solid rgba(255,255,255,0.4);
+    opacity: 0;
+    transform: translateY(18px);
+    animation: fadeUp 0.8s ease forwards;
+    animation-delay: 0.1s;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.18);
 }
 
-#contenedor-lara > * {
-    position: relative;
-    z-index: 1;
+#contenedor-lara:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 35px 80px rgba(0,0,0,0.30), 0 0 25px rgba(255,255,255,0.20);
 }
 
 .foto-principal {
@@ -83,10 +66,13 @@ border-bottom: 1.5px solid rgba(255,255,255,0.4);
     border: 5px solid rgba(255,255,255,0.95);
     margin: 1.3rem auto 2.2rem auto;
     display: block;
-    box-shadow: 
-        0 0 12px rgba(255,255,255,0.9), 
-        0 6px 18px rgba(0,0,0,0.25);
-  
+    box-shadow: 0 0 12px rgba(255,255,255,0.9), 0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.foto-principal:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 18px rgba(255,255,255,1), 0 10px 22px rgba(0,0,0,0.3);
 }
 
 .info-text {
@@ -95,27 +81,29 @@ border-bottom: 1.5px solid rgba(255,255,255,0.4);
     padding: 1rem 1.7rem;
     border-radius: 18px;
     margin-bottom: 1.6rem;
-
-    background: rgba(255, 255, 255, 0.18);
-    border: 1px solid rgba(255, 255, 255, 0.28);
+    background: rgba(255,255,255,0.18);
+    border: 1px solid rgba(255,255,255,0.28);
     backdrop-filter: blur(14px);
     color: rgba(255,255,255,0.95);
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
 
-    /* hover eliminado */
+.info-text:hover {
+    background: rgba(255,255,255,0.24);
+    border-color: rgba(255,255,255,0.45);
+    transform: translateY(-3px);
 }
 
 .info-text h2 {
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 0.3rem;
-    color: rgba(255,255,255,0.98);
 }
 
 .info-text p {
     font-size: 1.05rem;
     opacity: 0.96;
     line-height: 1.35;
-    font-weight: 400;
 }
 
 .social-icons {
@@ -142,4 +130,11 @@ border-bottom: 1.5px solid rgba(255,255,255,0.4);
     color: #ffffff;
     text-shadow: 0 0 8px rgba(255,255,255,0.8);
     transform: translateY(-3px) scale(1.25);
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
